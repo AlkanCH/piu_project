@@ -66,7 +66,6 @@ export class ProductCard extends HTMLElement {
 .product-card button:hover {
   opacity: 0.9;
 }
-      }
     </style>
 
     <div class="product-card">

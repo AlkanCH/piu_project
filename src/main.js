@@ -1,73 +1,73 @@
+// --- Importy komponentów i logiki stanu ---
 import { fetchProducts } from './api/products.js';
-import './components/product-card.js';
-import './components/cart-view.js';
-
-import './components/category-filter.js';
 import { subscribe, getState } from './state/store.js';
 
+import './components/product-card.js';
+import './components/cart-view.js';
+import './components/category-filter.js';
 import './components/sort-panel.js';
 import './components/brand-filter.js';
 
+// --- Aktualizacja licznika koszyka w nagłówku ---
 subscribe(() => {
     const { cart } = getState();
-    document.querySelector('#cart-count').textContent = cart.length;
+    const counter = document.querySelector('#cart-count');
+    if (counter) counter.textContent = cart.length;
 });
 
+// --- Inicjalizacja aplikacji ---
 async function init() {
-    // 1. Pobranie wszystkich produktów
+    // Pobranie produktów
     const allProducts = await fetchProducts();
 
-    // 2. Render początkowy
+    // Pierwsze renderowanie
     renderProducts(allProducts);
 
-    // 3. Reagowanie na zmiany stanu (filtry, sortowanie, koszyk)
+    // Reagowanie na zmiany stanu (filtry, sortowanie, koszyk)
     subscribe(() => renderProducts(allProducts));
 
-    // 4. Dodanie panelu filtrowania kategorii
-    const productsSection = document.querySelector('.products-section');
-
-    // 7. Dodanie widoku koszyka
+    // Wstawienie widoku koszyka
     const cartRoot = document.querySelector('#cart-root');
-    const cartView = document.createElement('cart-view');
-    cartRoot.appendChild(cartView);
-
-    const filtersWrapper = document.createElement('div');
-    filtersWrapper.classList.add('filters-wrapper');
-
-    productsSection.prepend(filtersWrapper);
+    if (cartRoot) {
+        const cartView = document.createElement('cart-view');
+        cartRoot.appendChild(cartView);
+    }
 }
 
 init();
 
+// --- Renderowanie produktów ---
 function renderProducts(allProducts) {
     const productsRoot = document.querySelector('#products-root');
+    if (!productsRoot) return;
+
     const { selectedCategory, sortBy, selectedBrands } = getState();
 
+    // Czyszczenie listy
     productsRoot.innerHTML = '';
 
-    // FILTROWANIE KATEGORII
+    // --- FILTROWANIE KATEGORII ---
     let filtered =
         selectedCategory === 'ALL'
             ? allProducts
             : allProducts.filter((p) => p.category === selectedCategory);
 
-    // FILTROWANIE PRODUCENTÓW
+    // --- FILTROWANIE PRODUCENTÓW ---
     if (selectedBrands.length > 0) {
         filtered = filtered.filter((p) => selectedBrands.includes(p.brand));
     }
 
-    // SORTOWANIE
+    // --- SORTOWANIE ---
     if (sortBy === 'PRICE_ASC') {
         filtered = [...filtered].sort((a, b) => a.price - b.price);
-    }
-    if (sortBy === 'PRICE_DESC') {
+    } else if (sortBy === 'PRICE_DESC') {
         filtered = [...filtered].sort((a, b) => b.price - a.price);
     }
 
-    // RENDEROWANIE
-    filtered.forEach((p) => {
+    // --- RENDEROWANIE KART PRODUKTÓW ---
+    filtered.forEach((product) => {
         const card = document.createElement('product-card');
-        card.data = p;
+        card.data = product;
         productsRoot.appendChild(card);
     });
 }

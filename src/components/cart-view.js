@@ -4,8 +4,6 @@ export class CartView extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-
-        // Subskrypcja zmian stanu
         subscribe(() => this.render());
     }
 
@@ -15,11 +13,11 @@ export class CartView extends HTMLElement {
 
     render() {
         const { cart } = getState();
+        const total = cart.reduce((sum, item) => sum + item.price, 0);
 
         this.shadowRoot.innerHTML = `
       <style>
         .cart-section {
-          min-width: 200px;
           background: white;
           border: 1px solid #ddd;
           border-radius: 8px;
@@ -61,6 +59,13 @@ export class CartView extends HTMLElement {
         button:hover {
           background: #b1271b;
         }
+
+        .total {
+          font-weight: 600;
+          text-align: right;
+          margin-top: 0.5rem;
+          font-size: 1rem;
+        }
       </style>
 
       <div class="cart-section">
@@ -78,6 +83,8 @@ export class CartView extends HTMLElement {
         `,
             )
             .join('')}
+
+        <p class="total">Razem: ${total} zł</p>
       </div>
     `;
 
