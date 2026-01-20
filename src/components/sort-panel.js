@@ -25,7 +25,7 @@ export class SortPanel extends HTMLElement {
         this.shadowRoot.innerHTML = `
       <style>
         .sort-panel {
-          background: #eee;
+        //   background: #eee;
           padding: 0.5rem 0.8rem;
           border-radius: 6px;
           display: flex;

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Kompik</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Główne style aplikacji -->
@@ -12,13 +13,16 @@
   <body>
     <!-- Górny pasek aplikacji -->
     <header class="app-header">
-      <h1 class="logo">Kompik</h1>
+      <h1 class="logo">
+        <img src="favicon.png" alt="Logo" class="logo-img" />
+        Kompik
+      </h1>
 
       <nav class="top-categories">
         <category-filter></category-filter>
       </nav>
 
-      <div class="cart-indicator">Koszyk: <span id="cart-count">0</span></div>
+      <!-- <div class="header-right"><button id="theme-toggle">🌙</button></div> -->
     </header>
 
     <!-- Główna część aplikacji -->

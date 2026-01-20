@@ -66,10 +66,15 @@ export class CartView extends HTMLElement {
           margin-top: 0.5rem;
           font-size: 1rem;
         }
+          .count {
+          font-size: 0.9rem;
+          color: #666;
+          font-weight: 500;
+}
       </style>
 
       <div class="cart-section">
-        <h2>Koszyk</h2>
+        <h2>Koszyk <span class="count">(${cart.length})</span></h2>
 
         ${cart.length === 0 ? '<p>Koszyk jest pusty.</p>' : ''}
 

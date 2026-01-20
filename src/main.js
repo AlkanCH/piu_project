@@ -8,13 +8,6 @@ import './components/category-filter.js';
 import './components/sort-panel.js';
 import './components/brand-filter.js';
 
-// --- Aktualizacja licznika koszyka w nagłówku ---
-subscribe(() => {
-    const { cart } = getState();
-    const counter = document.querySelector('#cart-count');
-    if (counter) counter.textContent = cart.length;
-});
-
 // --- Inicjalizacja aplikacji ---
 async function init() {
     // Pobranie produktów
@@ -35,6 +28,11 @@ async function init() {
 }
 
 init();
+
+// tryb ciemny
+document.querySelector('#theme-toggle').addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+});
 
 // --- Renderowanie produktów ---
 function renderProducts(allProducts) {
