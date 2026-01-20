@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kompik</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Główne style aplikacji -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- Górny pasek aplikacji -->
+    <header class="app-header">
+      <h1 class="logo">Kompik</h1>
+
+      <nav class="top-categories">
+        <category-filter></category-filter>
+      </nav>
+
+      <div class="cart-indicator">Koszyk: <span id="cart-count">0</span></div>
+    </header>
+
+    <!-- Główna część aplikacji -->
+    <main class="app-main">
+      <section class="products-section">
+        <div class="top-bar">
+          <sort-panel></sort-panel>
+        </div>
+
+        <div id="products-root"></div>
+      </section>
+
+      <aside class="right-sidebar">
+        <div id="cart-root"></div>
+        <brand-filter></brand-filter>
+      </aside>
+    </main>
+
+    <!-- Stopka -->
+    <footer class="app-footer">
+      <small>Projekt Kompik</small>
+    </footer>
+
+    <!-- Główny moduł JS -->
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
