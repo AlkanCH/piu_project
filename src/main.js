@@ -13,10 +13,8 @@ async function init() {
     // Pobranie produktów
     const allProducts = await fetchProducts();
 
-    // Pierwsze renderowanie
     renderProducts(allProducts);
 
-    // Reagowanie na zmiany stanu (filtry, sortowanie, koszyk)
     subscribe(() => renderProducts(allProducts));
 
     // Wstawienie widoku koszyka

@@ -23,14 +23,12 @@ export function updateState(updater) {
 export function subscribe(callback) {
     listeners.push(callback);
 
-    // zwracamy funkcję do odsubskrybowania
     return () => {
         const index = listeners.indexOf(callback);
         if (index !== -1) listeners.splice(index, 1);
     };
 }
 
-// udostępniamy globalnie dla Web Components
 window.appStoreSubscribe = subscribe;
 
 // --- Funkcje koszyka ---
