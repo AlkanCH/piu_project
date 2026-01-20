@@ -29,7 +29,6 @@ async function init() {
 
 init();
 
-// tryb ciemny
 document.querySelector('#theme-toggle').addEventListener('click', () => {
     document.body.classList.toggle('dark');
 });
@@ -44,13 +43,13 @@ function renderProducts(allProducts) {
     // Czyszczenie listy
     productsRoot.innerHTML = '';
 
-    // --- FILTROWANIE KATEGORII ---
+    // FILTROWANIE KATEGORII
     let filtered =
         selectedCategory === 'ALL'
             ? allProducts
             : allProducts.filter((p) => p.category === selectedCategory);
 
-    // --- FILTROWANIE PRODUCENTÓW ---
+    // FILTROWANIE PRODUCENTÓW
     if (selectedBrands.length > 0) {
         filtered = filtered.filter((p) => selectedBrands.includes(p.brand));
     }

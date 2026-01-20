@@ -328,7 +328,6 @@ export async function fetchProducts() {
             image: './src/img/ssd/corsair-mp600-1tb.jpg',
         },
 
-        // === Dodatkowe ===
         {
             id: 41,
             title: 'Intel Core i3-10100',

@@ -1,6 +1,4 @@
-/* ===========================
-   RESET & GLOBAL
-=========================== */
+/*   RESET & GLOBAL */
 
 * {
   margin: 0;
@@ -40,9 +38,7 @@ body:not(.dark) {
   background: linear-gradient(135deg, #e8f0ff, #f5f7fa);
 }
 
-/* ===========================
-   HEADER
-=========================== */
+/* HEADER */
 
 .app-header {
   background: var(--panel-bg);
@@ -118,9 +114,7 @@ body.dark .category-menu button:hover {
   color: var(--text-dark);
 }
 
-/* ===========================
-   MAIN LAYOUT
-=========================== */
+/*  MAIN LAYOUT */
 
 .app-main {
   display: flex;
@@ -130,9 +124,7 @@ body.dark .category-menu button:hover {
   margin: 0 auto;
 }
 
-/* ===========================
-   PRODUCTS SECTION
-=========================== */
+/*  PRODUCTS SECTION */
 
 .products-section {
   flex: 3;
@@ -147,9 +139,7 @@ body.dark .category-menu button:hover {
   gap: 1.2rem;
 }
 
-/* ===========================
-   FILTER PANELS
-=========================== */
+/*  FILTER PANELS */
 
 .filter-panel,
 .sort-panel,
@@ -214,9 +204,7 @@ body.dark .cart-section {
   transform: scale(1.2);
 }
 
-/* ===========================
-   CART SECTION
-=========================== */
+/*  CART SECTION */
 
 .cart-section {
   background: var(--panel-bg);
@@ -281,9 +269,7 @@ body.dark .cart-section {
   height: fit-content;
 }
 
-/* ===========================
-   FOOTER
-=========================== */
+/*  FOOTER */
 
 .app-footer {
   text-align: center;
