@@ -1,85 +1,3 @@
-// // export async function fetchProducts() {
-// //     const response = await fetch('https://fakestoreapi.com/products');
-// //     return await response.json();
-// // }
-
-// export async function fetchProducts() {
-//     return [
-//         {
-//             id: 1,
-//             title: 'Intel Core i5-12400F',
-//             price: 699,
-//             category: 'CPU',
-//             brand: 'Intel',
-//             specs: { cores: 6, threads: 12, clock: '4.4 GHz' },
-//             image: 'https://via.placeholder.com/200x150?text=Intel+CPU',
-//         },
-//         {
-//             id: 2,
-//             title: 'AMD Ryzen 5 5600',
-//             price: 599,
-//             category: 'CPU',
-//             brand: 'AMD',
-//             specs: { cores: 6, threads: 12, clock: '4.2 GHz' },
-//             image: 'https://via.placeholder.com/200x150?text=AMD+CPU',
-//         },
-//         {
-//             id: 3,
-//             title: 'NVIDIA RTX 3060',
-//             price: 1799,
-//             category: 'GPU',
-//             brand: 'NVIDIA',
-//             specs: { vram: '12 GB', tdp: '170W' },
-//             image: 'https://via.placeholder.com/200x150?text=NVIDIA+GPU',
-//         },
-//         {
-//             id: 4,
-//             title: 'AMD Radeon RX 6600',
-//             price: 1399,
-//             category: 'GPU',
-//             brand: 'AMD',
-//             specs: { vram: '8 GB', tdp: '132W' },
-//             image: 'https://via.placeholder.com/200x150?text=AMD+GPU',
-//         },
-//         {
-//             id: 5,
-//             title: 'Corsair Vengeance 16GB DDR4',
-//             price: 199,
-//             category: 'RAM',
-//             brand: 'Corsair',
-//             specs: { speed: '3200 MHz', type: 'DDR4' },
-//             image: 'https://via.placeholder.com/200x150?text=RAM',
-//         },
-//         {
-//             id: 6,
-//             title: 'Kingston Fury 32GB DDR4',
-//             price: 349,
-//             category: 'RAM',
-//             brand: 'Kingston',
-//             specs: { speed: '3600 MHz', type: 'DDR4' },
-//             image: 'https://via.placeholder.com/200x150?text=RAM',
-//         },
-//         {
-//             id: 7,
-//             title: 'Samsung 980 NVMe 1TB',
-//             price: 249,
-//             category: 'SSD',
-//             brand: 'Samsung',
-//             specs: { type: 'NVMe', speed: '3500 MB/s' },
-//             image: 'https://via.placeholder.com/200x150?text=SSD',
-//         },
-//         {
-//             id: 8,
-//             title: 'Crucial MX500 500GB',
-//             price: 149,
-//             category: 'SSD',
-//             brand: 'Crucial',
-//             specs: { type: 'SATA', speed: '560 MB/s' },
-//             image: 'https://via.placeholder.com/200x150?text=SSD',
-//         },
-//     ];
-// }
-
 export async function fetchProducts() {
     return [
         // === CPU ===
@@ -89,7 +7,7 @@ export async function fetchProducts() {
             category: 'CPU',
             brand: 'Intel',
             price: 399,
-            image: './img/cpu/intel-i3-12100f.jpg',
+            image: './src/img/cpu/intel-i3-12100f.jpg',
         },
         {
             id: 2,
@@ -97,7 +15,7 @@ export async function fetchProducts() {
             category: 'CPU',
             brand: 'Intel',
             price: 699,
-            image: './img/cpu/intel-i5-12400f.jpg',
+            image: './src/img/cpu/intel-i5-12400f.jpg',
         },
         {
             id: 3,
@@ -105,7 +23,7 @@ export async function fetchProducts() {
             category: 'CPU',
             brand: 'Intel',
             price: 1499,
-            image: './img/cpu/intel-i7-12700k.jpg',
+            image: './src/img/cpu/intel-i7-12700k.jpg',
         },
         {
             id: 4,
@@ -113,7 +31,7 @@ export async function fetchProducts() {
             category: 'CPU',
             brand: 'Intel',
             price: 2899,
-            image: './img/cpu/intel-i9-13900k.jpg',
+            image: './src/img/cpu/intel-i9-13900k.jpg',
         },
         {
             id: 5,
@@ -121,7 +39,7 @@ export async function fetchProducts() {
             category: 'CPU',
             brand: 'AMD',
             price: 499,
-            image: './img/cpu/amd-ryzen5-5600.jpg',
+            image: './src/img/cpu/amd-ryzen5-5600.jpg',
         },
         {
             id: 6,
@@ -129,7 +47,7 @@ export async function fetchProducts() {
             category: 'CPU',
             brand: 'AMD',
             price: 1199,
-            image: './img/cpu/amd-ryzen7-5800x.jpg',
+            image: './src/img/cpu/amd-ryzen7-5800x.jpg',
         },
         {
             id: 7,
@@ -137,7 +55,7 @@ export async function fetchProducts() {
             category: 'CPU',
             brand: 'AMD',
             price: 1799,
-            image: './img/cpu/amd-ryzen9-5900x.jpg',
+            image: './src/img/cpu/amd-ryzen9-5900x.jpg',
         },
         {
             id: 8,
@@ -145,7 +63,7 @@ export async function fetchProducts() {
             category: 'CPU',
             brand: 'AMD',
             price: 2999,
-            image: './img/cpu/amd-ryzen9-7950x.jpg',
+            image: './src/img/cpu/amd-ryzen9-7950x.jpg',
         },
         {
             id: 9,
@@ -153,7 +71,7 @@ export async function fetchProducts() {
             category: 'CPU',
             brand: 'Intel',
             price: 249,
-            image: './img/cpu/intel-pentium-g7400.jpg',
+            image: './src/img/cpu/intel-pentium-g7400.jpg',
         },
         {
             id: 10,
@@ -161,7 +79,7 @@ export async function fetchProducts() {
             category: 'CPU',
             brand: 'AMD',
             price: 199,
-            image: './img/cpu/amd-athlon-3000g.jpg',
+            image: './src/img/cpu/amd-athlon-3000g.jpg',
         },
 
         // === GPU ===
@@ -171,7 +89,7 @@ export async function fetchProducts() {
             category: 'GPU',
             brand: 'NVIDIA',
             price: 899,
-            image: './img/gpu/nvidia-gtx1650.jpg',
+            image: './src/img/gpu/nvidia-gtx1650.jpg',
         },
         {
             id: 12,
@@ -179,7 +97,7 @@ export async function fetchProducts() {
             category: 'GPU',
             brand: 'NVIDIA',
             price: 1299,
-            image: './img/gpu/nvidia-rtx3050.jpg',
+            image: './src/img/gpu/nvidia-rtx3050.jpg',
         },
         {
             id: 13,
@@ -187,7 +105,7 @@ export async function fetchProducts() {
             category: 'GPU',
             brand: 'NVIDIA',
             price: 1599,
-            image: './img/gpu/nvidia-rtx3060.jpg',
+            image: './src/img/gpu/nvidia-rtx3060.jpg',
         },
         {
             id: 14,
@@ -195,7 +113,7 @@ export async function fetchProducts() {
             category: 'GPU',
             brand: 'NVIDIA',
             price: 2399,
-            image: './img/gpu/nvidia-rtx3070.jpg',
+            image: './src/img/gpu/nvidia-rtx3070.jpg',
         },
         {
             id: 15,
@@ -203,7 +121,7 @@ export async function fetchProducts() {
             category: 'GPU',
             brand: 'NVIDIA',
             price: 3299,
-            image: './img/gpu/nvidia-rtx3080.jpg',
+            image: './src/img/gpu/nvidia-rtx3080.jpg',
         },
         {
             id: 16,
@@ -211,7 +129,7 @@ export async function fetchProducts() {
             category: 'GPU',
             brand: 'NVIDIA',
             price: 7999,
-            image: './img/gpu/nvidia-rtx4090.jpg',
+            image: './src/img/gpu/nvidia-rtx4090.jpg',
         },
         {
             id: 17,
@@ -219,7 +137,7 @@ export async function fetchProducts() {
             category: 'GPU',
             brand: 'AMD',
             price: 1299,
-            image: './img/gpu/amd-rx6600.jpg',
+            image: './src/img/gpu/amd-rx6600.jpg',
         },
         {
             id: 18,
@@ -227,7 +145,7 @@ export async function fetchProducts() {
             category: 'GPU',
             brand: 'AMD',
             price: 1899,
-            image: './img/gpu/amd-rx6700xt.jpg',
+            image: './src/img/gpu/amd-rx6700xt.jpg',
         },
         {
             id: 19,
@@ -235,7 +153,7 @@ export async function fetchProducts() {
             category: 'GPU',
             brand: 'AMD',
             price: 2499,
-            image: './img/gpu/amd-rx6800.jpg',
+            image: './src/img/gpu/amd-rx6800.jpg',
         },
         {
             id: 20,
@@ -243,7 +161,7 @@ export async function fetchProducts() {
             category: 'GPU',
             brand: 'AMD',
             price: 4999,
-            image: './img/gpu/amd-rx7900xtx.jpg',
+            image: './src/img/gpu/amd-rx7900xtx.jpg',
         },
 
         // === RAM ===
@@ -253,7 +171,7 @@ export async function fetchProducts() {
             category: 'RAM',
             brand: 'Corsair',
             price: 129,
-            image: './img/ram/corsair-8gb.jpg',
+            image: './src/img/ram/corsair-8gb.jpg',
         },
         {
             id: 22,
@@ -261,7 +179,7 @@ export async function fetchProducts() {
             category: 'RAM',
             brand: 'Corsair',
             price: 229,
-            image: './img/ram/corsair-16gb.jpg',
+            image: './src/img/ram/corsair-16gb.jpg',
         },
         {
             id: 23,
@@ -269,7 +187,7 @@ export async function fetchProducts() {
             category: 'RAM',
             brand: 'Corsair',
             price: 399,
-            image: './img/ram/corsair-32gb.jpg',
+            image: './src/img/ram/corsair-32gb.jpg',
         },
         {
             id: 24,
@@ -277,7 +195,7 @@ export async function fetchProducts() {
             category: 'RAM',
             brand: 'Kingston',
             price: 119,
-            image: './img/ram/kingston-8gb.jpg',
+            image: './src/img/ram/kingston-8gb.jpg',
         },
         {
             id: 25,
@@ -285,7 +203,7 @@ export async function fetchProducts() {
             category: 'RAM',
             brand: 'Kingston',
             price: 219,
-            image: './img/ram/kingston-16gb.jpg',
+            image: './src/img/ram/kingston-16gb.jpg',
         },
         {
             id: 26,
@@ -293,7 +211,7 @@ export async function fetchProducts() {
             category: 'RAM',
             brand: 'Kingston',
             price: 389,
-            image: './img/ram/kingston-32gb.jpg',
+            image: './src/img/ram/kingston-32gb.jpg',
         },
         {
             id: 27,
@@ -301,7 +219,7 @@ export async function fetchProducts() {
             category: 'RAM',
             brand: 'Crucial',
             price: 109,
-            image: './img/ram/crucial-8gb.jpg',
+            image: './src/img/ram/crucial-8gb.jpg',
         },
         {
             id: 28,
@@ -309,7 +227,7 @@ export async function fetchProducts() {
             category: 'RAM',
             brand: 'Crucial',
             price: 209,
-            image: './img/ram/crucial-16gb.jpg',
+            image: './src/img/ram/crucial-16gb.jpg',
         },
         {
             id: 29,
@@ -317,7 +235,7 @@ export async function fetchProducts() {
             category: 'RAM',
             brand: 'Crucial',
             price: 379,
-            image: './img/ram/crucial-32gb.jpg',
+            image: './src/img/ram/crucial-32gb.jpg',
         },
         {
             id: 30,
@@ -325,7 +243,7 @@ export async function fetchProducts() {
             category: 'RAM',
             brand: 'Samsung',
             price: 199,
-            image: './img/ram/samsung-16gb.jpg',
+            image: './src/img/ram/samsung-16gb.jpg',
         },
 
         // === SSD ===
@@ -335,7 +253,7 @@ export async function fetchProducts() {
             category: 'SSD',
             brand: 'Samsung',
             price: 199,
-            image: './img/ssd/samsung-970evo-250.jpg',
+            image: './src/img/ssd/samsung-970evo-250.jpg',
         },
         {
             id: 32,
@@ -343,7 +261,7 @@ export async function fetchProducts() {
             category: 'SSD',
             brand: 'Samsung',
             price: 299,
-            image: './img/ssd/samsung-970evo-500.jpg',
+            image: './src/img/ssd/samsung-970evo-500.jpg',
         },
         {
             id: 33,
@@ -351,7 +269,7 @@ export async function fetchProducts() {
             category: 'SSD',
             brand: 'Samsung',
             price: 499,
-            image: './img/ssd/samsung-980pro-1tb.jpg',
+            image: './src/img/ssd/samsung-980pro-1tb.jpg',
         },
         {
             id: 34,
@@ -359,7 +277,7 @@ export async function fetchProducts() {
             category: 'SSD',
             brand: 'Crucial',
             price: 159,
-            image: './img/ssd/crucial-mx500-250.jpg',
+            image: './src/img/ssd/crucial-mx500-250.jpg',
         },
         {
             id: 35,
@@ -367,7 +285,7 @@ export async function fetchProducts() {
             category: 'SSD',
             brand: 'Crucial',
             price: 229,
-            image: './img/ssd/crucial-mx500-500.jpg',
+            image: './src/img/ssd/crucial-mx500-500.jpg',
         },
         {
             id: 36,
@@ -375,7 +293,7 @@ export async function fetchProducts() {
             category: 'SSD',
             brand: 'Crucial',
             price: 449,
-            image: './img/ssd/crucial-p5plus-1tb.jpg',
+            image: './src/img/ssd/crucial-p5plus-1tb.jpg',
         },
         {
             id: 37,
@@ -383,7 +301,7 @@ export async function fetchProducts() {
             category: 'SSD',
             brand: 'Kingston',
             price: 149,
-            image: './img/ssd/kingston-a2000-250.jpg',
+            image: './src/img/ssd/kingston-a2000-250.jpg',
         },
         {
             id: 38,
@@ -391,7 +309,7 @@ export async function fetchProducts() {
             category: 'SSD',
             brand: 'Kingston',
             price: 219,
-            image: './img/ssd/kingston-a2000-500.jpg',
+            image: './src/img/ssd/kingston-a2000-500.jpg',
         },
         {
             id: 39,
@@ -399,7 +317,7 @@ export async function fetchProducts() {
             category: 'SSD',
             brand: 'Kingston',
             price: 399,
-            image: './img/ssd/kingston-nv2-1tb.jpg',
+            image: './src/img/ssd/kingston-nv2-1tb.jpg',
         },
         {
             id: 40,
@@ -407,7 +325,7 @@ export async function fetchProducts() {
             category: 'SSD',
             brand: 'Corsair',
             price: 479,
-            image: './img/ssd/corsair-mp600-1tb.jpg',
+            image: './src/img/ssd/corsair-mp600-1tb.jpg',
         },
 
         // === Dodatkowe ===
@@ -417,7 +335,7 @@ export async function fetchProducts() {
             category: 'CPU',
             brand: 'Intel',
             price: 349,
-            image: './img/cpu/intel-i3-10100.jpg',
+            image: './src/img/cpu/intel-i3-10100.jpg',
         },
         {
             id: 42,
@@ -425,7 +343,7 @@ export async function fetchProducts() {
             category: 'CPU',
             brand: 'AMD',
             price: 329,
-            image: './img/cpu/amd-ryzen3-4100.jpg',
+            image: './src/img/cpu/amd-ryzen3-4100.jpg',
         },
         {
             id: 43,
@@ -433,7 +351,7 @@ export async function fetchProducts() {
             category: 'GPU',
             brand: 'NVIDIA',
             price: 699,
-            image: './img/gpu/nvidia-gtx1050ti.jpg',
+            image: './src/img/gpu/nvidia-gtx1050ti.jpg',
         },
         {
             id: 44,
@@ -441,7 +359,7 @@ export async function fetchProducts() {
             category: 'GPU',
             brand: 'AMD',
             price: 599,
-            image: './img/gpu/amd-rx580.jpg',
+            image: './src/img/gpu/amd-rx580.jpg',
         },
         {
             id: 45,
@@ -449,7 +367,7 @@ export async function fetchProducts() {
             category: 'RAM',
             brand: 'Corsair',
             price: 699,
-            image: './img/ram/corsair-64gb.jpg',
+            image: './src/img/ram/corsair-64gb.jpg',
         },
         {
             id: 46,
@@ -457,7 +375,7 @@ export async function fetchProducts() {
             category: 'SSD',
             brand: 'Samsung',
             price: 699,
-            image: './img/ssd/samsung-870qvo-2tb.jpg',
+            image: './src/img/ssd/samsung-870qvo-2tb.jpg',
         },
         {
             id: 47,
@@ -465,7 +383,7 @@ export async function fetchProducts() {
             category: 'SSD',
             brand: 'Crucial',
             price: 749,
-            image: './img/ssd/crucial-p3-2tb.jpg',
+            image: './src/img/ssd/crucial-p3-2tb.jpg',
         },
         {
             id: 48,
@@ -473,7 +391,7 @@ export async function fetchProducts() {
             category: 'RAM',
             brand: 'Kingston',
             price: 749,
-            image: './img/ram/kingston-furybeast-64gb.jpg',
+            image: './src/img/ram/kingston-furybeast-64gb.jpg',
         },
         {
             id: 49,
@@ -481,7 +399,7 @@ export async function fetchProducts() {
             category: 'SSD',
             brand: 'Corsair',
             price: 899,
-            image: './img/ssd/corsair-mp600pro-2tb.jpg',
+            image: './src/img/ssd/corsair-mp600pro-2tb.jpg',
         },
     ];
 }
